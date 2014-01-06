@@ -54,8 +54,9 @@ public abstract  class BlunoLibrary  extends Activity{
 	
 	public void serialBegin(int baud){
 		mBaudrate=baud;
-		mBaudrateBuffer[3]=(byte) (mBaudrate & 0xFF);
-		mBaudrateBuffer[4]=(byte) ((mBaudrate>>8) & 0xFF);
+		mBaudrateBuffer[2]=(byte) (mBaudrate & 0xFF);
+		mBaudrateBuffer[3]=(byte) ((mBaudrate>>8) & 0xFF);
+		mBaudrateBuffer[4]=(byte) ((mBaudrate>>16) & 0xFF);
 
 	}
 	
