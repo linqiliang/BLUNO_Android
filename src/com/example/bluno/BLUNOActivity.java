@@ -505,6 +505,10 @@ public class BLUNOActivity extends BlunoLibrary {
 	
 		mConnectionState=theConnectionState;
 		switch (mConnectionState) {
+		case isScanning:
+	        titleImageView.setImageResource(R.drawable.title_scanning);
+			break;
+
 		case isConnected:
 	        titleImageView.setImageResource(R.drawable.title_connected);
 			receivedHandler.post(humidityRunnable); 
